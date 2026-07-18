@@ -4,7 +4,7 @@ An empirical validation and simulation framework demonstrating **Quantum Key Dis
 
 ---
 
-## 🔬 Project Architecture & Security+ Alignment
+## Project Architecture & Security+ Alignment
 
 This framework bridges the gap between quantum mechanics proofs and practical network infrastructure, mapping explicitly to **CompTIA Security+** domains:
 
@@ -14,7 +14,7 @@ This framework bridges the gap between quantum mechanics proofs and practical ne
 
 ---
 
-## 📊 Empirical Verification & Replication Targets
+## Empirical Verification & Replication Targets
 
 This software acts as a validation test suite designed to replicate landmark QKD academic benchmarks:
 
@@ -24,7 +24,7 @@ This software acts as a validation test suite designed to replicate landmark QKD
 
 ---
 
-## 🏗️ Directory Blueprint
+## Directory Blueprint
 
 ```text
 ├── alice_client.py     # Transmitting Node (Encodes quantum state vectors)
