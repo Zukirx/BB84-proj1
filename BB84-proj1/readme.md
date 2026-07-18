@@ -25,4 +25,21 @@ The adversary vector replicates the physics of the No-Cloning Theorem. Eve canno
 Upon receiving the telemetry pulses, Bob randomly selects his measurement filters. Alice and Bob then communicate over a public classical channel to cross-reference only the names of the filters they utilized, discarding all bit positions where their measurement bases diverged.
 
 ### 5. Dynamic Anomaly-Based Intrusion Detection System
-To verify line integrity, the system automatically slices out a dynamic sample subset representing exactly 20% of the sifted key pool to calculate the Quantum Bit Error Rate (QBER).
+To verify line integrity, the system automatically slices out a dynamic sample subset representing exactly 20% of the sifted key pool to calculate the Quantum Bit Error Rate (QBER). 
+* Clean Line State: QBER hovers safely between 1% and 5% due to natural fiber noise.
+* Intercepted State: Eve's activity guarantees a mathematical error injection baseline of approximately 25%.
+* Threshold Rule: If the calculated error rate breaches the strict 11% Shor-Preskill boundary, an intrusion alert trips, blocking key compilation and purging all volatile memory buffers.
+
+### 6. Privacy Amplification
+For keys that pass verification below the threshold, remaining data blocks are processed through a cryptographic SHA-256 hash function. This leverages the avalanche effect to reduce any partial statistical information an attacker might have leaked down to absolute zero.
+
+## Project Directory Structure
+
+```text
+├── server.py          # Flask Web Engine & Core BB84 Protocol Simulator
+├── requirements.txt  # Production dependencies manifest
+├── templates/
+│   └── index.html     # Dashboard User Interface DOM Frame Structure
+└── static/
+    ├── style.css      # Cyberpunk Monitoring Theme Layout Styles
+    └── app.js         # Asynchronous API Handler & Telemetry Renderer
