@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Key Simulator Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>🎛️ Configurations</h2>
+            <div class="control-group">
+                <label for="qubitRange">Qubit Stream Length (<span id="rangeValue">40</span>):</label>
+                <input type="range" id="qubitRange" min="20" max="1000" value="40" step="10">
+            </div>
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="eveToggle" checked>
+                <label for="eveToggle">Activate Eve MitM Attack</label>
+            </div>
+            <button id="runBtn" class="primary-btn">▶️ RUN PROTOCOL</button>
+        </aside>
+
+        <main class="dashboard-workspace">
+            <header class="main-header">
+                <h1>🔬 Quantum Key Distribution (BB84) Emulation Surface</h1>
+                <p>Empirical verification metrics for hardware sifting yield and anomaly intrusion tracking.</p>
+            </header>
+
+            <section class="metrics-grid">
+                <div class="card stat-card">
+                    <h3>Sifting Base Yield</h3>
+                    <div id="yieldMetric" class="metric-value">0.0%</div>
+                </div>
+                <div class="card stat-card">
+                    <h3>Measured QBER Error</h3>
+                    <div id="qberMetric" class="metric-value">0.0%</div>
+                </div>
+                <div class="card stat-card" id="statusCard">
+                    <h3>Shield IDS Status</h3>
+                    <div id="statusMetric" class="status-badge standby">STANDBY</div>
+                </div>
+            </section>
+
+            <section class="card crypto-hashes">
+                <h2>🔒 Privacy Amplification Verification (SHA-256 Symmetric Keys)</h2>
+                <div class="hash-grid-container">
+                    <div class="hash-row">
+                        <strong>Alice Final Key Hash:</strong>
+                        <span id="aliceHash" class="hash-box">N/A</span>
+                    </div>
+                    <div class="hash-row">
+                        <strong>Bob Final Key Hash:</strong>
+                        <span id="bobHash" class="hash-box">N/A</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card security-check-section">
+                <h2>⚠️ Public Security Audit Log (Dynamic Checked Bits Subset)</h2>
+                <div id="securityCheckContainer" class="photon-flex-row">
+                </div>
+            </section>
+
+            <section class="card photon-wire-section">
+                <h2>🎞️ Horizontal Channel Data Stream Telemetry (First 16 Positions)</h2>
+                <div id="photonWireContainer" class="photon-flex-row">
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
