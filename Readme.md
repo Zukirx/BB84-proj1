@@ -34,7 +34,7 @@ To verify line integrity, the system automatically slices out a dynamic sample s
 For keys that pass verification below the threshold, remaining data blocks are processed through a cryptographic SHA-256 hash function. This leverages the avalanche effect to reduce any partial statistical information an attacker might have leaked down to absolute zero.
 
 ## Project Directory Structure
-
+##  Link: https://quantum-key-exchange-simulator.onrender.com
 ```text
 ├── server.py          # Flask Web Engine & Core BB84 Protocol Simulator
 ├── requirements.txt  # Production dependencies manifest
@@ -45,4 +45,4 @@ For keys that pass verification below the threshold, remaining data blocks are p
     └── app.js         # Asynchronous API Handler & Telemetry Renderer
 
 
-  ##  Link: https://quantum-key-exchange-simulator.onrender.com
+  
